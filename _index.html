@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReallyGoodEmails - Scraped Articles Index</title>
+  <style>
+    body { 
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+      max-width: 1000px; 
+      margin: 2rem auto; 
+      padding: 0 1rem;
+      color: #333;
+    }
+    h1 { border-bottom: 3px solid #0066cc; padding-bottom: 0.5rem; }
+    h2 { 
+      border-bottom: 2px solid #333; 
+      padding-bottom: 0.5rem; 
+      margin-top: 2.5rem;
+    }
+    .stats { 
+      background: #f5f5f5; 
+      padding: 1.5rem; 
+      border-radius: 8px; 
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #0066cc;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .stat-error .stat-number {
+      color: #dc3545;
+    }
+    .article-list { 
+      list-style: none; 
+      padding: 0;
+      margin: 0;
+    }
+    .article-list li { 
+      padding: 0.75rem 0; 
+      border-bottom: 1px solid #eee; 
+      display: flex; 
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .article-list li:hover {
+      background: #f9f9f9;
+    }
+    .article-list a { 
+      color: #0066cc; 
+      text-decoration: none;
+      flex: 1;
+    }
+    .article-list a:hover { text-decoration: underline; }
+    .date { 
+      color: #666; 
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .status-error {
+      color: #dc3545;
+      font-size: 0.8rem;
+    }
+    .status-success {
+      color: #28a745;
+      font-size: 0.8rem;
+    }
+    .search-box {
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .filter-info {
+      background: #e8f4fc;
+      padding: 1rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>ReallyGoodEmails - Scraped Articles</h1>
+  
+  <div class="stats">
+    <div class="stat-item">
+      <div class="stat-number">29</div>
+      <div class="stat-label">Articles</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">16</div>
+      <div class="stat-label">Feedback Friday</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">45</div>
+      <div class="stat-label">Scaricati con successo</div>
+    </div>
+    <div class="stat-item ">
+      <div class="stat-number">0</div>
+      <div class="stat-label">Errori</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">29/01/2026</div>
+      <div class="stat-label">Data scraping</div>
+    </div>
+  </div>
+  
+  <div class="filter-info">
+    <strong>Filtri applicati:</strong> Articoli da Settembre 2024 + titoli specifici selezionati
+  </div>
+  
+  <input type="text" class="search-box" id="searchBox" placeholder="Cerca articoli..." onkeyup="filterArticles()">
+  
+  <h2>Articles (29)</h2>
+  <ul class="article-list" id="articlesList">
+    <li data-title="the most saved emails of 2025">
+      <a href="articles/the-most-saved-emails-of-2025/article.html">The most saved emails of 2025</a>
+      <span class="status-success">✓</span>
+      <span class="date">13 Gen 2026</span>
+    </li>
+    <li data-title="the really good email awards 2025">
+      <a href="articles/the-really-good-email-awards-2025/article.html">The Really Good Email Awards 2025</a>
+      <span class="status-success">✓</span>
+      <span class="date">19 Dic 2025</span>
+    </li>
+    <li data-title="what november emails tell us about trust, taste, and timing">
+      <a href="articles/what-november-emails-tell-us-about-trust-taste-and-timing/article.html">What November emails tell us about trust, taste, and timing</a>
+      <span class="status-success">✓</span>
+      <span class="date">3 Dic 2025</span>
+    </li>
+    <li data-title="mastering email accessibility: best practices and insights with mark robbins">
+      <a href="articles/mastering-email-accessibility-best-practices-and-insights-with-mark-robbins/article.html">Mastering email accessibility: best practices and insights with Mark Robbins</a>
+      <span class="status-success">✓</span>
+      <span class="date">2 Dic 2025</span>
+    </li>
+    <li data-title="mastering email marketing: strategies for exceptional customer experience">
+      <a href="articles/mastering-email-marketing-strategies-for-exceptional-customer-experience/article.html">Mastering email marketing: strategies for exceptional customer experience</a>
+      <span class="status-success">✓</span>
+      <span class="date">25 Nov 2025</span>
+    </li>
+    <li data-title="is your email award-worthy? enter the 2025 rge awards">
+      <a href="articles/is-your-email-award-worthy-enter-the-2025-rge-awards/article.html">Is your email award-worthy? Enter the 2025 RGE Awards</a>
+      <span class="status-success">✓</span>
+      <span class="date">21 Nov 2025</span>
+    </li>
+    <li data-title="communicating your brand values">
+      <a href="articles/communicating-your-brand-values/article.html">Communicating your brand values</a>
+      <span class="status-success">✓</span>
+      <span class="date">18 Nov 2025</span>
+    </li>
+    <li data-title="the smart email marketers mindset">
+      <a href="articles/the-smart-email-marketers-mindset/article.html">The SMART email marketers mindset</a>
+      <span class="status-success">✓</span>
+      <span class="date">14 Nov 2025</span>
+    </li>
+    <li data-title="fighting brains with email">
+      <a href="articles/fighting-brains-with-email/article.html">Fighting brains with email</a>
+      <span class="status-success">✓</span>
+      <span class="date">7 Nov 2025</span>
+    </li>
+    <li data-title="what october emails reveal about calm as a strategy">
+      <a href="articles/what-october-emails-reveal-about-calm-as-a-strategy/article.html">What October emails reveal about calm as a strategy</a>
+      <span class="status-success">✓</span>
+      <span class="date">5 Nov 2025</span>
+    </li>
+    <li data-title="marketing mayhem recap: what this game show taught us about email marketing">
+      <a href="articles/marketing-mayhem-recap-what-this-game-show-taught-us-about-email-marketing/article.html">Marketing Mayhem recap: what this game show taught us about email marketing</a>
+      <span class="status-success">✓</span>
+      <span class="date">31 Ott 2025</span>
+    </li>
+    <li data-title="what september’s most-saved emails say about the inbox right now">
+      <a href="articles/what-septembers-most-saved-emails-say-about-the-inbox-right-now/article.html">What September’s Most-Saved Emails Say About the Inbox Right Now</a>
+      <span class="status-success">✓</span>
+      <span class="date">15 Ott 2025</span>
+    </li>
+    <li data-title="email design trends: what works, what doesn&#39;t, and why">
+      <a href="articles/email-design-trends-what-works-what-doesnt-and-why/article.html">Email Design Trends: what works, what doesn&#39;t, and why</a>
+      <span class="status-success">✓</span>
+      <span class="date">26 Set 2025</span>
+    </li>
+    <li data-title="email accessibility made practical: tools experts actually use">
+      <a href="articles/email-accessibility-made-practical-tools-experts-actually-use/article.html">Email Accessibility Made Practical: Tools Experts Actually Use</a>
+      <span class="status-success">✓</span>
+      <span class="date">23 Set 2025</span>
+    </li>
+    <li data-title="mastering modern messaging: keep your brand trusted and true">
+      <a href="articles/mastering-modern-messaging-keep-your-brand-trusted-and-true/article.html">Mastering modern messaging: keep your brand trusted and true</a>
+      <span class="status-success">✓</span>
+      <span class="date">17 Set 2025</span>
+    </li>
+    <li data-title="from data chaos to email clarity: the strategy you’ve been missing">
+      <a href="articles/from-data-chaos-to-email-clarity-the-strategy-youve-been-missing/article.html">From data chaos to email clarity: the strategy you’ve been missing</a>
+      <span class="status-success">✓</span>
+      <span class="date">10 Set 2025</span>
+    </li>
+    <li data-title="make the most of your marketing budget: let the customer be the hero">
+      <a href="articles/make-the-most-of-your-marketing-budget-let-the-customer-be-the-hero/article.html">Make the most of your marketing budget: let the customer be the hero</a>
+      <span class="status-success">✓</span>
+      <span class="date">2 Set 2025</span>
+    </li>
+    <li data-title="q1 2025 email patterns, trends, and outliers">
+      <a href="articles/q1-2025-email-patterns-trends-and-outliers/article.html">Q1 2025 Email Patterns, Trends, and Outliers</a>
+      <span class="status-success">✓</span>
+      <span class="date">8 Apr 2025</span>
+    </li>
+    <li data-title="from noise to noteworthy: crafting human-centered, high-impact emails">
+      <a href="articles/from-noise-to-noteworthy-crafting-human-centered-high-impact-emails/article.html">From Noise to Noteworthy: Crafting Human-Centered, High-Impact Emails</a>
+      <span class="status-success">✓</span>
+      <span class="date">25 Ott 2024</span>
+    </li>
+    <li data-title="why email is the most underrated branding tool">
+      <a href="articles/why-email-is-the-most-underrated-branding-tool/article.html">Why email is the most underrated branding tool</a>
+      <span class="status-success">✓</span>
+      <span class="date">12 Mag 2024</span>
+    </li>
+    <li data-title="email design trends for 2021">
+      <a href="articles/email-design-trends-for-2021/article.html">Email Design Trends for 2021</a>
+      <span class="status-success">✓</span>
+      <span class="date">25 Gen 2021</span>
+    </li>
+    <li data-title="do email subscription pop-ups work?">
+      <a href="articles/do-email-subscription-pop-ups-work/article.html">Do Email Subscription Pop-Ups work?</a>
+      <span class="status-success">✓</span>
+      <span class="date">2 Nov 2020</span>
+    </li>
+    <li data-title="rebranding, activism, and interactivity: what you can learn from skillshare&#39;s email design and strategy">
+      <a href="articles/rebranding-activism-and-interactivity-what-you-can-learn-from-skillshares-email-design-and-strategy/article.html">Rebranding, activism, and interactivity: What you can learn from Skillshare&#39;s email design and strategy</a>
+      <span class="status-success">✓</span>
+      <span class="date">21 Set 2020</span>
+    </li>
+    <li data-title="braze bonfire x really good emails ama">
+      <a href="articles/braze-bonfire-x-really-good-emails-ama/article.html">Braze Bonfire x Really Good Emails AMA</a>
+      <span class="status-success">✓</span>
+      <span class="date">26 Ago 2020</span>
+    </li>
+    <li data-title="what makes an email agency tick">
+      <a href="articles/what-makes-an-email-agency-tick/article.html">What makes an email agency tick</a>
+      <span class="status-success">✓</span>
+      <span class="date">10 Lug 2020</span>
+    </li>
+    <li data-title="9 of the biggest email design trends from the past year">
+      <a href="articles/9-of-the-biggest-email-design-trends-from-the-past-year/article.html">9 of the Biggest Email Design Trends From the Past Year</a>
+      <span class="status-success">✓</span>
+      <span class="date">17 Mag 2020</span>
+    </li>
+    <li data-title="the black friday recap">
+      <a href="articles/the-black-friday-recap/article.html">The Black Friday Recap</a>
+      <span class="status-success">✓</span>
+      <span class="date">10 Dic 2019</span>
+    </li>
+    <li data-title="2018 email industry conditions">
+      <a href="articles/2018-email-industry-conditions/article.html">2018 Email Industry Conditions</a>
+      <span class="status-success">✓</span>
+      <span class="date">27 Giu 2019</span>
+    </li>
+    <li data-title="what makes a really good email?">
+      <a href="articles/what-makes-a-really-good-email/article.html">What Makes A Really Good Email?</a>
+      <span class="status-success">✓</span>
+      <span class="date">29 Gen 2018</span>
+    </li>
+  </ul>
+
+  <h2>Feedback Friday (16)</h2>
+  <ul class="article-list" id="feedbackList">
+    <li data-title="reviewing buoy’s emails through design, education, and conversion">
+      <a href="feedback-friday/reviewing-buoys-emails-through-design-education-and-conversion/article.html">Reviewing Buoy’s emails through design, education, and conversion</a>
+      <span class="status-success">✓</span>
+      <span class="date">29 Gen 2026</span>
+    </li>
+    <li data-title="turning taboo into trust: emailing about intimacy with kasey luck">
+      <a href="feedback-friday/turning-taboo-into-trust-emailing-about-intimacy-with-kasey-luck/article.html">Turning taboo into trust: emailing about intimacy with Kasey Luck</a>
+      <span class="status-success">✓</span>
+      <span class="date">2 Gen 2026</span>
+    </li>
+    <li data-title="athletic brewing: how smart design sells sober-friendly beer">
+      <a href="feedback-friday/athletic-brewing-how-smart-design-sells-sober-friendly-beer/article.html">Athletic Brewing: how smart design sells sober-friendly beer</a>
+      <span class="status-success">✓</span>
+      <span class="date">12 Dic 2025</span>
+    </li>
+    <li data-title="how chipotle nailed email sesign with minimalism and motion">
+      <a href="feedback-friday/how-chipotle-nailed-email-sesign-with-minimalism-and-motion/article.html">How Chipotle nailed email sesign with minimalism and motion</a>
+      <span class="status-success">✓</span>
+      <span class="date">9 Dic 2025</span>
+    </li>
+    <li data-title="are your emails accessible? imbodhi email review with kasey luck">
+      <a href="feedback-friday/are-your-emails-accessible-imbodhi-email-review-with-kasey-luck/article.html">Are your emails accessible? Imbodhi email review with Kasey Luck</a>
+      <span class="status-success">✓</span>
+      <span class="date">5 Dic 2025</span>
+    </li>
+    <li data-title="figma, ux, and inbox army’s email design system workflow">
+      <a href="feedback-friday/figma-ux-and-inbox-armys-email-design-system-workflow/article.html">Figma, UX, and Inbox Army’s email design system workflow</a>
+      <span class="status-success">✓</span>
+      <span class="date">28 Nov 2025</span>
+    </li>
+    <li data-title="designing trust: how elysium turns newsletters into learning experiences">
+      <a href="feedback-friday/designing-trust-how-elysium-turns-newsletters-into-learning-experiences/article.html">Designing trust: how Elysium turns newsletters into learning experiences</a>
+      <span class="status-success">✓</span>
+      <span class="date">11 Nov 2025</span>
+    </li>
+    <li data-title="feedback friday live at single slice sf: wuffes email review">
+      <a href="feedback-friday/feedback-friday-live-at-single-slice-sf-wuffes-email-review/article.html">Feedback Friday live at Single Slice SF: Wuffes email review</a>
+      <span class="status-success">✓</span>
+      <span class="date">24 Ott 2025</span>
+    </li>
+    <li data-title="revamping email marketing for a better bagel with flowium ">
+      <a href="feedback-friday/revamping-email-marketing-for-a-better-bagel-with-flowium/article.html">Revamping Email Marketing for a Better Bagel with Flowium </a>
+      <span class="status-success">✓</span>
+      <span class="date">17 Ott 2025</span>
+    </li>
+    <li data-title="design and development strategies with julia papanek ">
+      <a href="feedback-friday/design-and-development-strategies-with-julia-papanek/article.html">Design and Development Strategies with Julia Papanek </a>
+      <span class="status-success">✓</span>
+      <span class="date">14 Ott 2025</span>
+    </li>
+    <li data-title="youtube year-in-review emails: data, design, and shareability ">
+      <a href="feedback-friday/youtube-year-in-review-emails-data-design-and-shareability/article.html">YouTube year-in-review emails: data, design, and shareability </a>
+      <span class="status-success">✓</span>
+      <span class="date">10 Ott 2025</span>
+    </li>
+    <li data-title="email marketing deep dive with megan boshuyzen ">
+      <a href="feedback-friday/email-marketing-deep-dive-with-megan-boshuyzen/article.html">Email marketing deep dive with Megan Boshuyzen </a>
+      <span class="status-success">✓</span>
+      <span class="date">30 Set 2025</span>
+    </li>
+    <li data-title="inside the going.com rebrand with lori dennis">
+      <a href="feedback-friday/inside-the-goingcom-rebrand-with-lori-dennis/article.html">Inside the Going.com rebrand with Lori Dennis</a>
+      <span class="status-success">✓</span>
+      <span class="date">19 Set 2025</span>
+    </li>
+    <li data-title="strategizing pop-up designs with justuno">
+      <a href="feedback-friday/strategizing-pop-up-designs-with-justuno/article.html">Strategizing Pop-Up Designs with Justuno</a>
+      <span class="status-success">✓</span>
+      <span class="date">16 Lug 2021</span>
+    </li>
+    <li data-title="squashing objections and embracing user-generated content with supergoop!">
+      <a href="feedback-friday/squashing-objections-and-embracing-user-generated-content-with-supergoop/article.html">Squashing objections and embracing user-generated content with Supergoop!</a>
+      <span class="status-success">✓</span>
+      <span class="date">26 Giu 2020</span>
+    </li>
+    <li data-title="feedback friday: litmus at unspam 2019">
+      <a href="feedback-friday/feedback-friday-litmus-at-unspam-2019/article.html">Feedback Friday: Litmus at UNSPAM 2019</a>
+      <span class="status-success">✓</span>
+      <span class="date">19 Mag 2019</span>
+    </li>
+  </ul>
+  
+  <script>
+    function filterArticles() {
+      const query = document.getElementById('searchBox').value.toLowerCase();
+      const allItems = document.querySelectorAll('.article-list li');
+      
+      allItems.forEach(item => {
+        const title = item.getAttribute('data-title');
+        if (title.includes(query)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
